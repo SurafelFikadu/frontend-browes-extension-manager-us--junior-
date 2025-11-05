@@ -1,0 +1,296 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    padding: 10px;
+    font-size: 16px;
+    height: 100%;
+    transition: 0.3s;
+}
+/* ------------------ */
+body.light {
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}
+
+/* header */
+/* *************** */
+body header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 21%;
+    background: hsl(226, 25%, 17%);
+    width: 90%;
+    padding: 10px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+/* ---------------------- */
+body header.header-light {
+    background-color: hsl(200, 60%, 99%);
+}
+
+header img:nth-child(1) {
+    height: 30px;
+}
+
+header img:nth-child(2) {
+    background-color: hsl(225, 23%, 24%);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* ------------------- */
+header img:nth-child(2).h-img2-light {
+    background-color: hsl(0, 0%, 78%);
+}
+
+/* List **** */
+/* ********************* */
+body > .ex-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ex-list > .ex {
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(200, 60%, 99%);
+    width: 100%;
+    margin-bottom: 12px;
+}
+/* ----------------- */
+.ex-list > .ex.ex-light {
+    color: hsl(227, 75%, 14%);
+}
+
+.ex-list > .list {
+    display: flex;
+    justify-content: space-between;
+    width: 120%;
+    color: hsl(0, 0%, 93%);
+    list-style: none;
+}
+/* ----------------- */
+.ex-list > .list.list-light {
+    color: #091540;
+}
+
+.list li {
+    background: hsl(226, 25%, 17%);
+    padding: 10px 15px;
+    margin: 2px;
+    border-radius: 18px;
+    box-shadow: 0px 0px 0px 1px hsl(226, 11%, 37%);
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+/* --------------- */
+.list li.li-light {
+    background: hsl(200, 60%, 99%);
+    box-shadow: 0px 0px 0px 1px hsl(217, 61%, 90%);
+}
+
+.list li input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.list li:hover {
+    background: hsl(226, 11%, 37%);
+}
+/* ------------------- */
+.list li.li-light:hover {
+    background: hsl(217, 61%, 90%);
+    color: hsl(226, 11%, 37%);
+}
+
+.list li:has(input:checked) {
+    color: hsl(227, 75%, 14%);
+    background: hsl(3, 77%, 44%);
+    box-shadow: 0px 0px 0px 1px hsl(3, 86%, 64%);
+    font-weight: 600;
+    transition: 0.3s;
+}
+/* ------------------ */
+.list li.li-light:has(input:checked) {
+    color: hsl(0, 0%, 93%);
+}
+
+.list li:has(input:checked):hover {
+    background: hsl(3, 71%, 56%);
+}
+
+
+/* main ****** */
+/* ******************* */
+body main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main > .box {
+    background-color: hsl(226, 25%, 17%);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 350px;
+    min-height: 150px;
+}
+/* --------- */
+main > .box.box-light {
+    background-color: hsl(200, 60%, 99%);
+}
+
+.box > .img-with {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.img-with img {
+    width: 45px;
+}
+
+.img-with > .title-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.title-p .title {
+    font-weight: 700;
+    color: hsl(0, 0%, 93%);
+}
+/* ---------- */
+.title-p .title.title-light {
+    color: hsl(226, 25%, 17%);
+}
+
+.title-p .para {
+    color: hsl(0, 0%, 78%);
+}
+/* ------------------ */
+.title-p .para.para-light {
+    color: hsl(225, 23%, 24%);
+}
+
+.box .remove-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-switch .remove {
+    color: hsl(217, 61%, 90%);
+    border: 1px solid hsl(0, 0%, 78%);
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* --------------- */
+.remove-switch .remove.remove-light {
+    color: hsl(226, 25%, 17%);
+}
+
+.remove-switch .remove:hover {
+    background: hsl(3, 77%, 44%);
+    color: #040918;
+}
+/* -------------- */
+.remove-switch .remove.remove-light:hover {
+    color: hsl(0, 0%, 93%);
+}
+
+.remove-switch .switch {
+    height: 16px;
+    width: 33px;
+    background: hsl(226, 11%, 37%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.remove-switch .switch:hover {
+    background: hsl(225, 23%, 24%);
+}
+.switch input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.switch:has(input:checked) {
+    background: hsl(3, 71%, 56%);
+    justify-content: end;
+}
+
+.switch:has(input:checked):hover {
+    background: hsl(3, 77%, 44%);
+}
+
+.switch .switch-in {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: white
+}
+
+@media (min-width:850px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    body > .ex-list {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .ex-list > .list {
+        justify-content: end;
+        gap: 5px;
+    }
+
+    body main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}

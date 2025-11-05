@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+</head>
+<body>
+  <header>
+    <img id="ex-logo" src="./assets/images/extension-logo.png" alt="Extensions-logo">
+    <img id="moon-sun" src="./assets/images/icon-sun.svg" alt="icon-moon-sun" onclick="ClickMoonSun()">
+  </header>
+  <div class="ex-list">
+    <div class="ex">
+      Extensions List
+    </div>
+    <ul class="list">
+      <li><input type="radio" name="aai" id="all" value="all" onclick="All()" checked><label for="all">All</label></li>
+      <li><input type="radio" name="aai" id="active" value="active" onclick="Active()"><label for="active">Active</label></li>
+      <li><input type="radio" name="aai" id="inactive" value="inactive" onclick="Inactive()"><label for="inactive">Inactive</label></li>
+    </ul>
+  </div>
+
+  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+  <main>
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-devlens.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">DevLens</div>
+          <div class="para">
+            Quickly inspect page layouts and visualize element boundaries.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-style-spy.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">StyleSpy</div>
+          <div class="para">
+            Instantly analyze and copy CSS from any webpage element.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-speed-boost.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">SpeedBoost</div>
+          <div class="para">
+            Optimizes browser resource usage to accelerate page loading.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-json-wizard.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">JSONWizard</div>
+          <div class="para">
+            Formats, validates, and prettifies JSON responses in-browser.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-tab-master-pro.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">TabMaster Pro</div>
+          <div class="para">
+            Organizes browser tabs into groups and sessions.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-viewport-buddy.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">ViewportBuddy</div>
+          <div class="para">
+            Simulates various screen resolutions directly within the browser.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-markup-notes.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">Markup Notes</div>
+          <div class="para">
+            Enables annotation and notes directly onto webpages for collaborative debugging.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-grid-guides.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">GridGuides</div>
+          <div class="para">
+            Overlay customizable grids and alignment guides on any webpage.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-palette-picker.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">Palette Picker</div>
+          <div class="para">
+            Instantly extracts color palettes from any webpage.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-link-checker.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">LinkChecker</div>
+          <div class="para">
+            Scans and highlights broken links on any page.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-dom-snapshot.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">DOM Snapshot</div>
+          <div class="para">
+            Capture and export DOM structures quickly.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img-with">
+        <img src="./assets/images/logo-console-plus.svg" alt="divlens">
+        <div class="title-p">
+          <div class="title">ConsolePlus</div>
+          <div class="para">
+            Enhanced developer console with advanced filtering and logging.
+          </div>
+        </div>
+      </div>
+      <div class="remove-switch">
+        <span class="remove">Remove</span>
+        <div class="switch">
+          <div class="switch-in"><input type="checkbox" name="checkbox" class="checkbox" checked></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
