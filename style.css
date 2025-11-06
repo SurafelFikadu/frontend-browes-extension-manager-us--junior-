@@ -294,3 +294,72 @@ main > .box.box-light {
 .block {
     display: block;
 }
+
+
+/* Are you sure you want remove this extension */
+.sure {
+    position: absolute;
+    background-color:#040918;
+    padding: 30px 40px;
+    border-radius: 20px;
+    color: #EBF2FC;
+    margin: 10px;
+    border: 1px solid rgb(218, 255, 164);
+    justify-content: center;
+    align-items: center;
+}
+
+.sure h1 {
+    margin-bottom: 20px;
+}
+
+.sure.sure-light {
+    background-color: #ffe4e4;
+    color: #040918;
+}
+
+.sure p {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.sure .btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btns button {
+    padding: 15px 30px;
+    font-size: large;
+    background: transparent;
+    color: #EBF2FC;
+    border-radius: 25px;
+    border-style: none;
+    border: 1px solid rgb(202, 148, 47);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btns button.btn-light {
+    color: #040918;
+}
+
+.btns button:nth-child(1):hover {
+    background-color: red;
+}
+
+.btns button:nth-child(2):hover {
+    background-color: wheat;
+    color: #040918;
+}
+
+.flex {
+    display: flex;
+}
+
+header.dimmed, .ex-list.dimmed, main.dimmed {
+    opacity: 0.7;
+    pointer-events: none;
+}

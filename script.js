@@ -12,8 +12,14 @@ function ClickMoonSun() {
     let title = document.getElementsByClassName('title');
     let para = document.querySelectorAll('.para');
     let remove = document.querySelectorAll('.remove');
+    let sure = document.querySelector('.sure');
+    let btns = document.querySelectorAll('.btns button')
 
     if(MoonSun.src.includes(SunImg)) {
+        btns.forEach(item => {
+            item.classList.add('btn-light')
+        })
+        sure.classList.add('sure-light');
         MoonSun.src = MoonImg
         body.classList.add('light')
         header.classList.add('header-light')
@@ -38,6 +44,10 @@ function ClickMoonSun() {
         })
     }
     else {
+        btns.forEach(item => {
+            item.classList.remove('btn-light')
+        })
+        sure.classList.remove('sure-light');
         MoonSun.src = SunImg
         body.classList.remove('light')
         header.classList.remove('header-light')
@@ -69,7 +79,6 @@ const inactive = document.getElementById('inactive');
 
 let box = document.getElementsByClassName('box');
 let checkbox = document.getElementsByClassName('checkbox');
-let removeButtons = document.querySelectorAll('.remove');
 
 const Active = () => {
     for(let i=0; i < box.length; i++) {
@@ -112,9 +121,40 @@ const All = () => {
 //     })
 // })
 
+let removeButtons = document.querySelectorAll('.remove');
 removeButtons.forEach(btn => {
     btn.addEventListener('click', function () {
-        const boxx = this.closest('.box');
-        boxx.remove();
+        let sure = document.querySelector('.sure');
+        let header = document.querySelector('header');
+        let exList = document.querySelector('.ex-list');
+        let main = document.querySelector('main');
+
+        header.classList.add('dimmed');
+        exList.classList.add('dimmed');
+        main.classList.add('dimmed');
+        sure.classList.remove('none');
+
+        let removeBtn = document.querySelector('.remove-btn');
+        let cancelBtn = document.querySelector('.cancel-btn');
+
+        removeBtn.addEventListener('click', () => {
+            const boxx = this.closest('.box');
+            boxx.remove();
+
+            header.classList.remove('dimmed');
+            exList.classList.remove('dimmed');
+            main.classList.remove('dimmed');
+            sure.classList.add('none');
+        })
+
+        cancelBtn.addEventListener('click', () => {
+            header.classList.remove('dimmed');
+            exList.classList.remove('dimmed');
+            main.classList.remove('dimmed');
+            sure.classList.add('none');
+        })
+
+        // const boxx = this.closest('.box');
+        // boxx.remove();
     })
 })
